@@ -3,6 +3,13 @@ let scene, camera, renderer, controls, model;
 init();
 loadModel();
 
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
+
+// 前面我寫的 init, loadModel, exportModel, animate 等函式就可以直接用
+
 function init() {
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x222222);
